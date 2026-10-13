@@ -30,10 +30,11 @@ def bubble_sort_trace(data):
                 data[j] = data[j + 1]
                 data[j + 1] = temp
                 swapped = True
-            lst.append(data)
+            lst.append(data.copy())
         if swapped == False:
             break
-    return data
+    return lst
+
 
 # Exercise 3
 def insertion_sort(data):
