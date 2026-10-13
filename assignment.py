@@ -52,8 +52,19 @@ def insertion_sort(data):
     return data
 # Exercise 4
 def insertion_sort_trace(data):
-    # Write your code here
-    pass
+    lst=[]
+    for i in range(1, len(data)):
+        key = data[i]
+        j = i - 1
+        while j >= 0 and data[j] > key:
+            data[j + 1] = data[j]
+            j = j - 1
+        data[j + 1] = key
+        lst.append(data.copy())
+
+    return lst
+
+
 
 # Exercise 5
 def rank_students(records):
