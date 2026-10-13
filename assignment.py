@@ -68,5 +68,16 @@ def insertion_sort_trace(data):
 
 # Exercise 5
 def rank_students(records):
-    # Write your code here
-    pass
+    n = len(records)
+    for i in range(n):
+        swapped = False
+        for j in range(n-i-1):
+            if records[j][1] > records[j+1][1]:
+                temp = records[j]
+                records[j]= records[j+1]
+                records[j+1] = temp
+                swapped=True
+        if swapped == False:
+            break
+
+    return records[::-1]
