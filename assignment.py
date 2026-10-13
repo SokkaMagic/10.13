@@ -72,7 +72,7 @@ def rank_students(records):
         key = records[i][1]
         j = i - 1
         while j >= 0 and records[j][1] < key:
-            records[j + 1][1] = records[j][1]
+            records[j + 1] = records[j]
             j = j - 1
-            records[j + 1][1] = key
+            records[j + 1] = key
     return records
