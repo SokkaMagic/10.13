@@ -24,15 +24,19 @@ def bubble_sort_trace(data):
     n = len(data)
     for i in range(n):
         swapped = False
+
+
         for j in range(n - i - 1):
             if data[j] > data[j + 1]:
                 temp = data[j]
                 data[j] = data[j + 1]
                 data[j + 1] = temp
                 swapped = True
-            lst.append(data.copy())
+
         if swapped == False:
+
             break
+        lst.append(data.copy())
     return lst
 
 
